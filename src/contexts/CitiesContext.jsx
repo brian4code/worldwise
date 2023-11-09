@@ -89,6 +89,7 @@ function CitiesProvider({ children }) {
     fetchCities();
   }, []);
 
+  // make use of useCallback to memoize the function and make the function stable and not recreated on re-render
   const getCity = useCallback(
     async function getCity(id) {
       // if the city is already selected, then don't fetch data from API
